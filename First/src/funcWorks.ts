@@ -21,3 +21,38 @@ const userDetails = (id: stringOrNum, user: userType) => {
 const sayHello = (user: userType) => {
     console.log(`Hello ${user.age > 50 ? "sir" : "Mr."} ${user.name}`);
 }
+
+
+// function signatures
+let add: (x: number, y: number) => number;
+add = (x: number, y: number) => {
+    return x + y;
+}
+console.log(add(50, 50));
+
+
+let calc: (m: number, n: number, p: string) => number;
+
+calc = (m: number, n: number, p: string) => {
+    if ( p === "add") {
+        return m + n;
+    }
+    else {
+        return m - n;
+    }
+}
+console.log(calc(99, 50, "add"));
+
+
+
+let userInfo: (id: number | string, userData: {
+    name: string,
+    age: number
+}) => void;
+
+userInfo = (id: number | string, userData: {
+    name: string,
+    age: number
+}) => {
+
+};
